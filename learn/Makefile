@@ -122,10 +122,14 @@ help: .help-post
 clean:
 	rm -rf build/*
 	rm -rf dist/*
+	rm -rf doc/html
+	rm -rf doc/latex
 
 doxy:
-	doxygen doc/learn.doxy
+	doxygen doc/doxyfile
 	firefox doc/html/index.html
+	mv html doc/
+	mv latex doc/
 
 zip: clobber
 	rm -rf zip/*
