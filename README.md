@@ -1,4 +1,4 @@
-# Traductor-Bigramas
+# Bigram Analyzer
 
 Práctica final de la asignatura de **Metodología de Programación**.
 
