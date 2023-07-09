@@ -119,6 +119,10 @@ help: .help-post
 .help-post: .help-impl
 # Add your post 'help' code here...
 
+clean:
+	rm -rf build/*
+	rm -rf dist/*
+
 doxy:
 	doxygen doc/learn.doxy
 	firefox doc/html/index.html
