@@ -119,6 +119,8 @@ help: .help-post
 .help-post: .help-impl
 # Add your post 'help' code here...
 
+# OPCIONES DEL MAKEFILE
+
 clean:
 	rm -rf build/*
 	rm -rf dist/*
@@ -127,9 +129,9 @@ clean:
 
 doxy:
 	doxygen doc/doxyfile
-	firefox doc/html/index.html
 	mv html doc/
 	mv latex doc/
+	firefox doc/html/index.html
 
 zip: clobber
 	rm -rf zip/*
