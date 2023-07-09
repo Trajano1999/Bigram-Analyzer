@@ -126,6 +126,10 @@ clean:
 	rm -rf dist/*
 	rm -rf doc/html
 	rm -rf doc/latex
+	rm out.bgr
+
+exec:
+	./dist/Debug/GNU-Linux/learn -c -l -f ./data/quijote.txt
 
 doxy:
 	doxygen doc/doxyfile
@@ -137,7 +141,7 @@ zip: clobber
 	rm -rf zip/*
 	rm -rf dist/*
 	rm -rf doc/html doc/latex
-	zip -r zip/practica6.zip * -x nbproject/private/*
+	zip -r zip/biagram_analyzer.zip * -x nbproject/private/*
 
 testv:
 	valgrind --leak-check=full dist/Debug/GNU-Linux/learn
