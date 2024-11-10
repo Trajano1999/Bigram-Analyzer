@@ -18,7 +18,7 @@ El programa tiene como función analizar la cantidad de bigramas presentes en un
 
     ``make exec``
 
-    También se puede indicar al programa un archivo de texto junto con los argumentos correspondientes para generar el archivo final, de la siguiente manera:
+    También se puede indicar al programa un archivo de texto junto con los argumentos correspondientes para generar el archivo de salida de la siguiente manera:
 
     ``./dist/Debug/GNU-Linux/learn {-c|-a} [-t|-b] [-l nombreIdioma] [-f ficheroSalida] texto1.txt texto2.txt ...``
 
@@ -27,10 +27,10 @@ El programa tiene como función analizar la cantidad de bigramas presentes en un
     - ``-c|-a``: especifica la operación a realizar, ya sea crear un archivo de idioma (-c) o añadir a un archivo de idioma existente (-a).
     - ``-l nombreIdioma``: define el idioma (por defecto, "unknown").
     - ``-f ficheroSalida``: indica el nombre del archivo de salida (por defecto, "salida.bgx").
-    - ``texto1.txt texto2.txt ...``: se refiere a los archivos de entrada (se requiere al menos uno).
+    - ``texto1.txt texto2.txt ...``: referencia a los archivos de entrada (se requiere al menos uno).
 
 Finalmente, es importante recordar que se puede hacer uso de los siguientes comandos:
 
 - ``make clean``: limpia los archivos creados.
-- ``make zip``: genera un archivo .zip del programa.
-- ``make testv``: comprueba los errores del programa utilizando valgrind.
+- ``make zip``: genera un archivo ``.zip`` del programa.
+- ``make testv``: comprueba los errores del programa utilizando **Valgrind**.
