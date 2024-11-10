@@ -1,43 +1,36 @@
 # Bigram Analyzer
 
-Práctica final de la asignatura de **Metodología de Programación**.
+Práctica final de la asignatura de **Metodología de Programación** del Doble Grado en Ingeniería Informática y Matemáticas de la Universidad de Granada.
 
 ## Descripción
 
-El programa se encarga de analizar el número de bigramas de un texto pasado como argumento y organizarlos en un archivo de salida para permitir su estudio y  comparación con otros ficheros de idiomas, para así detectar el idioma en el que está escrito. 
-
-### Nota :
-El programa no está terminado pues el análisis sí que lo realiza al completo, pero faltaría comparar ese análisis con los resultados de cada idioma e identificarlo con el resultado más parecido. Así, el programa daría como resultado simplemente el idioma en que un fichero está escrito.
+El programa tiene como función analizar la cantidad de bigramas presentes en un texto proporcionado como argumento y organizarlos en un archivo de salida, lo que facilita su estudio y comparación con otros documentos lingüísticos, con el fin de determinar el idioma en el que está redactado.
 
 ## Compilación y Ejecución
 
-* Para compilarlo en **Linux**, desde la carpeta en la que tenemos los archivos del repositorio, introducir en la terminal el siguiente comando :
+- Para compilar el programa en **Linux**, debe introducirse el siguiente comando en la terminal:
 
-    `make`
+    ``make``
 
-    este comando creará dos nuevas carpetas llamadas **build** y **data** con sus archivos correspondientes dentro. 
+    Este comando generará dos nuevas carpetas, denominadas ``build`` y ``data``, junto con los archivos correspondientes dentro de ellas.
 
-* Para ejecutarlo, podemos aprovechar la ejecución de prueba proporcionada por el makefile usando el siguiente comando :
+- Para ejecutarlo, podemos aprovechar la ejecución de prueba proporcionada por el makefile usando el siguiente comando:
 
-    `make exec`
+    ``make exec``
 
-    Aunque las ejecuciones son mucho más variadas, pudiendole pasar al programa cualquier archivo de texto con distintos argumentos para obtener el fichero final.
+    También se puede indicar al programa un archivo de texto junto con los argumentos correspondientes para generar el archivo final, de la siguiente manera:
 
-    Podemos por tanto, ejecutarlo de la siguiente forma :
+    ``./dist/Debug/GNU-Linux/learn {-c|-a} [-t|-b] [-l nombreIdioma] [-f ficheroSalida] texto1.txt texto2.txt ...``
 
-    `./dist/Debug/GNU-Linux/learn {-c|-a} [-t|-b] [-l nombreIdioma] [-f ficheroSalida] texto1.txt texto2.txt ...`
+    Cuyos parámetros son:
 
-    cuyos parámetros son :
+    - ``-c|-a``: especifica la operación a realizar, ya sea crear un archivo de idioma (-c) o añadir a un archivo de idioma existente (-a).
+    - ``-l nombreIdioma``: define el idioma (por defecto, "unknown").
+    - ``-f ficheroSalida``: indica el nombre del archivo de salida (por defecto, "salida.bgx").
+    - ``texto1.txt texto2.txt ...``: se refiere a los archivos de entrada (se requiere al menos uno).
 
-        -c|-a: operación crear fichero de idioma (-c) o añadir a fichero de idioma (-a)
-        -l nombreIdioma: idioma (unknown por defecto)
-        -f ficheroSalida:  nombre del fichero de salida (salida.bgx por defecto)
-        texto1.txt texto2.txt texto3.txt ....: nombres de los ficheros de entrada (debe haber al menos 1)
+Finalmente, es importante recordar que se puede hacer uso de los siguientes comandos:
 
-Finalmente recordemos que podemos hacer uso de :
-
-`make clean` : para limpiar los archivos creados.
-
-`make zip` : para generar un archivo .zip del programa.
-
-`make testv` : para comprobar los errores del programa usando valgrind.
+- ``make clean``: limpia los archivos creados.
+- ``make zip``: genera un archivo .zip del programa.
+- ``make testv``: comprueba los errores del programa utilizando valgrind.
